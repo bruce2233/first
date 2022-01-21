@@ -1,7 +1,6 @@
-from win32com.client import Dispatch
+from win32com.client import gencache,Dispatch,constants
 import win32print
-
-app = Dispatch('Word.Application')
+app = gencache.EnsureDispatch('Word.Application')
 # 新建word文档
 # doc = app.Documents.Add()
 # app.Visible = True
@@ -17,7 +16,14 @@ for it in win32print.EnumPrinters(2):
     
 testFile = 'C:\\Users\\86442\\Desktop\\TemporaryWork\\'
 docs = app.Documents
-print(docs.Open(testFile + 'in.docx'))
-# print(docs.Activate)
+
+docs.Open(testFile + 'in.docx')
+docs.Open(testFile + 'in2.docx')
+# print(docs[0])
+# print(docs[1])
+
 def printDoc( str ):
-    print()
+    app.PrintOut(FileName=str, Range= constants.wdPrintAllDocument)
+    
+printDoc(testFile)
+
