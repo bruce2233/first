@@ -9,23 +9,24 @@ class Example(QWidget):
  
     def initUI(self):
         self.lbl = QLabel("Ubuntu", self)
- 
-        combo = QComboBox(self)
-        combo.addItem("Ubuntu")
-        combo.addItem("Mandriva")
-        combo.addItem("Fedora")
-        combo.addItem("Arch")
-        combo.addItem("Gentoo")
- 
-        combo.move(50, 50)
         self.lbl.move(50, 150)
- 
-        combo.activated[str].connect(self.onActivated)
-
+        
+        # combo = QComboBox(self)
+        # combo.addItem("Ubuntu")
+        # combo.addItem("Mandriva")
+        # combo.addItem("Fedora")
+        # combo.addItem("Arch")
+        # combo.addItem("Gentoo")
+        # combo.move(50, 50)
+        # combo.activated[str].connect(self.onActivated)
+        
+        # fileNameLabel = QLabel('testLabel',self)
+        # fileNameLabel.move(0, 50)
+        
         self.fileButton = QPushButton('select file',self)
         self.fileButton.move(10,10)
         
-        self.setGeometry(300, 300, 300, 200)
+        self.setGeometry(300, 300, 800, 600)
         self.setWindowTitle('QComboBox')
         self.show()
  
@@ -33,3 +34,5 @@ class Example(QWidget):
         self.lbl.setText(text)
         self.lbl.adjustSize()
     
+    
+        

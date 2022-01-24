@@ -1,6 +1,5 @@
 from win32com.client import Dispatch
-class MyDocument:
-    
+class MyDocumentConfig:
     def __init__(self, documentFileName, range, fromPage, toPage ):
         self.documentFileName = documentFileName
         self.copies = 1
@@ -8,3 +7,6 @@ class MyDocument:
         self.fromPage = fromPage
         self.toPage = toPage
         
+    def setFromPage(fromPage):
+        # self.fromPage = fromPage
+        print(fromPage)
