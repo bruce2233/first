@@ -10,3 +10,5 @@ class MyDocumentConfig:
     def setFromPage(fromPage):
         # self.fromPage = fromPage
         print(fromPage)
+        
+        
