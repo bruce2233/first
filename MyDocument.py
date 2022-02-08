@@ -8,7 +8,6 @@ class MyDocumentConfig:
         self.toPage = toPage
         
     def setFromPage(fromPage):
-        # self.fromPage = fromPage
         print(fromPage)
         
         
